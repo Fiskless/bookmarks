@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social_django',
+    'images.apps.ImageConfig',
 ]
 
 MIDDLEWARE = [
@@ -64,6 +65,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 'social_django.context_processors.backends',
             ],
         },
     },
@@ -136,4 +138,14 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
     'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.google.GoogleOAuth2',
 ]
+
+# SOCIAL_AUTH_VK_OAUTH2_KEY = '7799860'
+# SOCIAL_AUTH_VK_OAUTH2_SECRET = 'En4LSq9SIimErFRHky1M'
+# SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['email']
+
+SOCIAL_AUTH_FACEBOOK_KEY = '254074146370474'
+SOCIAL_AUTH_FACEBOOK_SECRET = '7573248c16c6b9d0e575f015d2b76467'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
